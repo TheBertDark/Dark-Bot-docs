@@ -1,0 +1,357 @@
+:root {
+  /* Accent and brand colors */
+  --dbot-accent: rgb(125, 31, 219);
+  --dbot-accent-light: rgb(131, 36, 166);
+  --dbot-accent-dark: rgb(71, 13, 147);
+  --dbot-bg: rgb(11, 9, 15);
+  --dbot-bg-alt: rgb(11, 12, 14);
+  --dbot-bg-card: rgba(125, 31, 219, 0.1);
+  --dbot-bg-card-alt: rgba(255, 255, 255, 0.05);
+  --dbot-border: rgb(224, 222, 226);
+  --dbot-border-accent: rgb(125, 31, 219);
+  --dbot-border-alt: rgba(224, 222, 226, 0.1);
+  --dbot-shadow: 0 4px 24px rgba(125, 31, 219, 0.08);
+  --dbot-shadow-hover: 0 8px 32px rgba(125, 31, 219, 0.18);
+  --dbot-radius: 18px;
+
+  /* Text colors */
+  --dbot-text-main: rgb(255, 255, 255);
+  --dbot-text-secondary: rgb(160, 158, 163);
+  --dbot-text-muted: rgba(255,255,255,0.5);
+  --dbot-text-strong: rgba(255,255,255,0.9);
+  --dbot-text-accent: rgb(125, 31, 219);
+  --dbot-text-soft: rgb(224, 222, 226);
+  --dbot-text-invert: rgb(11, 9, 15);
+}
+
+.dbot-highlight-section {
+  background: var(--dbot-bg-card);
+  border-radius: var(--dbot-radius);
+  box-shadow: var(--dbot-shadow);
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  margin: 2.5rem 0;
+  border-left: 8px solid var(--dbot-accent);
+  color: var(--dbot-text-main);
+  transition: box-shadow 0.2s, background 0.2s;
+  backdrop-filter: blur(2px);
+}
+.dbot-highlight-section:hover {
+  box-shadow: var(--dbot-shadow-hover);
+  background: var(--dbot-bg-card-alt);
+}
+.dbot-highlight-section h2, .dbot-highlight-section h3 {
+  color: var(--dbot-accent);
+  margin-top: 0;
+}
+.dbot-highlight-section ul {
+  list-style: none;
+  padding: 0;
+}
+.dbot-highlight-section ul li {
+  margin: 0.6em 0;
+  padding-left: 1.2em;
+  position: relative;
+  color: var(--dbot-text-secondary);
+}
+.dbot-highlight-section ul li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  color: var(--dbot-accent-light);
+}
+.dbot-highlight-section p {
+  font-size: 1.12em;
+  color: var(--dbot-text-main);
+}
+.dbot-highlight-section table {
+  width: 100%;
+  margin-top: 1.5em;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(125, 31, 219, 0.06);
+  background: var(--dbot-bg-alt);
+}
+.dbot-highlight-section th, .dbot-highlight-section td {
+  padding: 0.7em 1em;
+  text-align: center;
+  color: var(--dbot-text-main);
+  border: 1px solid var(--dbot-border-alt);
+}
+.dbot-highlight-section a {
+  background: var(--dbot-accent);
+  color: var(--dbot-text-main);
+  padding: 16px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25em;
+  box-shadow: 0 2px 12px rgba(125, 31, 219, 0.13);
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.dbot-highlight-section a:hover {
+  background: var(--dbot-accent-light);
+  color: var(--dbot-text-soft);
+}
+
+.dbot-content-section {
+  background: linear-gradient(135deg, rgba(131,36,166,0.18) 0%, rgba(71,13,147,0.11) 100%), var(--dbot-bg-card);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(125,31,219,0.08), 0 1.5px 8px rgba(11,9,15,0.18);
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+  border: 1px solid var(--dbot-border-alt);
+  color: var(--dbot-text-main);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.dbot-content-section:hover {
+  box-shadow: 0 8px 40px rgba(125,31,219,0.12), 0 2px 12px rgba(11,9,15,0.24);
+  transform: translateY(-2px);
+}
+
+.dbot-content-section h2, .dbot-content-section h3 {
+  color: var(--dbot-accent-light);
+  margin-top: 0;
+  text-shadow: 0 1px 2px rgba(11,9,15,0.3);
+}
+
+.dbot-content-section p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: var(--dbot-text-main);
+}
+
+.dbot-content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dbot-content-section ul li {
+  margin: 0.8em 0;
+  padding-left: 1.5em;
+  position: relative;
+  color: var(--dbot-text-secondary);
+  font-size: 1.05em;
+}
+
+.dbot-content-section ul li::before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+  color: var(--dbot-accent);
+}
+
+.dbot-content-section code {
+  background: rgba(125, 31, 219, 0.15);
+  color: var(--dbot-accent-light);
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  border: 1px solid rgba(125, 31, 219, 0.2);
+}
+
+.dbot-content-section pre {
+  background: var(--dbot-bg-alt);
+  border: 1px solid var(--dbot-border-alt);
+  border-radius: 12px;
+  padding: 1.5em;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 8px rgba(11,9,15,0.2);
+}
+
+.dbot-content-section pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--dbot-text-main);
+}
+
+.dbot-content-section table {
+  width: 100%;
+  margin-top: 1.5em;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(125, 31, 219, 0.08);
+  background: var(--dbot-bg-alt);
+  border: 1px solid var(--dbot-border-alt);
+}
+
+.dbot-content-section th {
+  background: linear-gradient(135deg, var(--dbot-accent) 0%, var(--dbot-accent-light) 100%);
+  color: var(--dbot-text-main);
+  padding: 1em;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid var(--dbot-accent-dark);
+}
+
+.dbot-content-section td {
+  padding: 0.8em 1em;
+  color: var(--dbot-text-main);
+  border-bottom: 1px solid var(--dbot-border-alt);
+}
+
+.dbot-content-section tr:hover {
+  background: rgba(125, 31, 219, 0.05);
+}
+
+.dbot-content-section a {
+  color: var(--dbot-accent-light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.dbot-content-section a:hover {
+  color: var(--dbot-accent);
+  border-bottom-color: var(--dbot-accent);
+}
+
+.dbot-button {
+  background: linear-gradient(135deg, var(--dbot-accent) 0%, var(--dbot-accent-light) 100%);
+  color: var(--dbot-text-main);
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  box-shadow: 0 4px 16px rgba(125, 31, 219, 0.2);
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 1px solid var(--dbot-accent);
+  text-align: center;
+}
+
+.dbot-button:hover {
+  background: linear-gradient(135deg, var(--dbot-accent-light) 0%, var(--dbot-accent) 100%);
+  box-shadow: 0 6px 24px rgba(125, 31, 219, 0.3);
+  transform: translateY(-2px);
+  color: var(--dbot-text-main);
+}
+
+.dbot-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(125, 31, 219, 0.2);
+}
+
+.dbot-card {
+  background: var(--dbot-bg-card);
+  border: 1px solid var(--dbot-border-alt);
+  border-radius: var(--dbot-radius);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--dbot-shadow);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.dbot-card:hover {
+  box-shadow: var(--dbot-shadow-hover);
+  transform: translateY(-1px);
+  border-color: var(--dbot-accent);
+}
+
+.dbot-card h3 {
+  color: var(--dbot-accent);
+  margin-top: 0;
+}
+
+.dbot-card p {
+  color: var(--dbot-text-secondary);
+  line-height: 1.6;
+}
+
+.dbot-warning {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--dbot-text-main);
+}
+
+.dbot-info {
+  background: linear-gradient(135deg, rgba(13, 202, 240, 0.1) 0%, rgba(0, 123, 255, 0.05) 100%);
+  border-left: 4px solid #0dcaf0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--dbot-text-main);
+}
+
+.dbot-success {
+  background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(40, 167, 69, 0.05) 100%);
+  border-left: 4px solid #198754;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--dbot-text-main);
+}
+
+.dbot-danger {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(214, 51, 132, 0.05) 100%);
+  border-left: 4px solid #dc3545;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--dbot-text-main);
+}
+
+@media (max-width: 768px) {
+  .dbot-highlight-section,
+  .dbot-content-section,
+  .dbot-card {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .dbot-button {
+    padding: 12px 24px;
+    font-size: 1em;
+  }
+}
+
+/* Dark theme enhancements */
+.dark {
+  --dbot-bg: rgb(8, 6, 12);
+  --dbot-bg-alt: rgb(13, 11, 17);
+  --dbot-bg-card: rgba(125, 31, 219, 0.08);
+  --dbot-bg-card-alt: rgba(255, 255, 255, 0.03);
+  --dbot-border-alt: rgba(224, 222, 226, 0.08);
+  --dbot-text-secondary: rgb(140, 138, 143);
+  --dbot-text-muted: rgba(255,255,255,0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dbot-bg-alt);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dbot-accent);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dbot-accent-light);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(125, 31, 219, 0.3);
+  color: var(--dbot-text-main);
+}
+
+::-moz-selection {
+  background: rgba(125, 31, 219, 0.3);
+  color: var(--dbot-text-main);
+}
